@@ -1,0 +1,12 @@
+{
+  "name": "power-104-fm",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "videos": "node scripts/fetch-videos.mjs",
+    "test": "node --test",
+    "build": "npm run videos",
+    "serve": "npx --yes serve@14 ."
+  }
+}

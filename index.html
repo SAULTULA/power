@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>POWER 104.1 FM — Escuchá en vivo</title>
+  <meta name="description" content="POWER 104.1 FM: escuchá la señal en vivo, videos, programas y contactanos." />
+  <link rel="icon" href="assets/img/logo-32.png" sizes="32x32" />
+  <link rel="icon" href="assets/img/logo-80.png" sizes="80x80" />
+  <link rel="icon" href="assets/img/logo-512.png" sizes="512x512" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/img/logo-180.png" />
+  <link rel="preconnect" href="https://i.ytimg.com" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script type="module" src="src/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#view" data-skip>Saltar al contenido</a>
+  <header id="nav-root"></header>
+  <main id="view" tabindex="-1"></main>
+  <div id="player-root"></div>
+  <div id="lightbox-root"></div>
+  <script type="module">
+    document.addEventListener('click', e => {
+      const a = e.target instanceof Element ? e.target.closest('[data-skip]') : null;
+      if (!a) return;
+      e.preventDefault();
+      document.getElementById('view')?.focus();
+    });
+  </script>
+</body>
+</html>
